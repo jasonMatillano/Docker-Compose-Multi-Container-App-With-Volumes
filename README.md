@@ -28,6 +28,7 @@ We are going to run this application with the docker compose up command in your 
 ```
 docker compose up -d
 ```
+
 Breaking down the command
 The -d flag tells docker compose to run in detached mode.
     
@@ -38,3 +39,9 @@ In Docker Desktop, you should now have two containers running (the todo-app, and
 Add some tasks in the frontend, and then open the app in a new tab. Notice that the tasks are still visible.
 
 And open http://localhost:3000 in your browser.
+
+Having your configuration stored in a Compose file has another advantage, you can easily delete everything and restart.
+
+# Step 6 : Delete and Restart
+
+Simply select the app stack, and then select Delete on Docker Desktop. When you want to restart, run docker compose up in the project folder again. This will restart your application again. Note that when the db container is deleted, any todos created are also lost.
