@@ -46,6 +46,10 @@ Having your configuration stored in a Compose file has another advantage, you ca
 
 Simply select the app stack, and then select Delete on Docker Desktop. When you want to restart, run docker compose up in the project folder again. This will restart your application again. Note that when the db container is deleted, any todos created are also lost.
 
-# Step 7 : What's Next?
+# Step 7 : Persist your data between containers
 
 You just saw how to run multiple containers at the same time. However, when the db container was deleted and recreated you lost all the todos. Next you can learn how to persist data in the db container.
+
+Docker isolates all content, code, and data in a container from your local filesystem. This means, that when you delete a container within Docker Desktop, all the content within it is deleted.
+
+Sometimes you may want to persist data that a container generated. This is when you can use volumes.
