@@ -27,10 +27,10 @@ We are going to run this application with the docker compose up command in your 
 
 ```
 docker compose up -d
-
 ```
-    Breaking down the command
-    The -d flag tells docker compose to run in detached mode.
+Breaking down the command
+The -d flag tells docker compose to run in detached mode.
+    
 # Step 5 : View the frontend
 
 In Docker Desktop, you should now have two containers running (the todo-app, and todo-database). To view the frontend, expand the app stack in Containers and select the link to localhost:3000⁠.
