@@ -2,7 +2,7 @@
 
 This is a repo for new users getting started with Docker.
 
-```If you've already completed the How do I run a container? guide, you saw that you must start each container individually. Imagine how great it would be if a tool could start multiple containers with a single command. That tool is Docker Compose.```
+If you've already completed the How do I run a container? guide, you saw that you must start each container individually. Imagine how great it would be if a tool could start multiple containers with a single command. That tool is Docker Compose.
 
 
 # Step 1 : Clone Sample Application
