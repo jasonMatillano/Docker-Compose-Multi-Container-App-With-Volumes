@@ -57,3 +57,25 @@ Sometimes you may want to persist data that a container generated. This is when 
 # Step 8 : Using Volumes
 
 If you want to persist data even after a container is deleted, you can use a volume. A volume is a location in your local filesystem, managed by Docker.
+
+# Step 9 : Adding Volumes to Compose
+
+To add a volume to this project, simply go to the compose.yaml file and uncomment the following lines:
+
+```
+todo-database:
+    # ...
+    volumes:
+      - database:/data/db
+                      
+# ...
+volumes:
+  database:
+```
+Digging deeper
+
+The volumes element that is nested in todo-database tells Compose to mount the volume named database to /data/db in the container for the todo-database service.
+
+The top-level volumes element defines and configures a volume named database that can be used by any of the services in the Compose file.
+
+Now, no matter how often you delete and restart the container, your data is persisted and accessible to any container on your system by mounting the database volume. Docker will check for a volume and create one if there is none present.
